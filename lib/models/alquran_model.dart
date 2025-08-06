@@ -1,14 +1,15 @@
+// lib/models/model_alquran.dart
 class ModelAlQuran {
-  final String arti;
-  final String asma;
-  final int ayat;
-  final String nama;
-  final String type;
-  final String urut;
-  final String audio;
-  final String nomor;
-  final String rukuk;
-  final String keterangan;
+  final String? arti;
+  final String? asma;
+  final int? ayat;
+  final String? nama;
+  final String? type;
+  final String? urut;
+  final String? audio;
+  final String? nomor;
+  final String? rukuk;
+  final String? keterangan;
 
   ModelAlQuran({
     required this.arti,
@@ -25,16 +26,16 @@ class ModelAlQuran {
 
   factory ModelAlQuran.fromJson(Map<String, dynamic> json) {
     return ModelAlQuran(
-      arti: json['arti'] ?? '',
-      asma: json['asma'] ?? '',
-      ayat: json['ayat'] != null ? int.parse(json['ayat'].toString()) : 0,
-      nama: json['nama'] ?? '',
-      type: json['type'] ?? '',
-      urut: json['urut'] ?? '',
-      audio: json['audio'] ?? '',
-      nomor: json['nomor'] ?? '',
-      rukuk: json['rukuk'] ?? '',
-      keterangan: json['keterangan'] ?? '',
+      arti: json['arti'],
+      asma: json['asma'],
+      ayat: int.tryParse(json['ayat'].toString()),
+      nama: json['nama'],
+      type: json['type'],
+      urut: json['urut'],
+      audio: json['audio'],
+      nomor: json['nomor'],
+      rukuk: json['rukuk'],
+      keterangan: json['keterangan'],
     );
   }
 
