@@ -119,4 +119,8 @@ class ProductService {
     );
     return response.statusCode == 200;
   }
+
+  fetchProductDetail(int productId) {}
+
+  fetchProductById(int productId) {}
 }

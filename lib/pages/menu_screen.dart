@@ -1,4 +1,6 @@
 import 'package:dit_ya/pages/Post/list_posts_screen.dart';
+import 'package:dit_ya/pages/alquran/list_alquran.dart';
+import 'package:dit_ya/pages/ganjil/list_ganjil.dart';
 import 'package:dit_ya/pages/home__screen.dart';
 import 'package:dit_ya/pages/product/product_list.dart';
 import 'package:dit_ya/pages/profile_screen.dart';
@@ -18,6 +20,8 @@ class _MenuScreenState extends State<MenuScreen> {
   final List<Widget> _pages = [
     HomeScreen(), // Ganti dari Center(text: ...) ke HomeScreen()
     ListPostScreen(),
+    QuranListPage(),
+    ProductListPage(),
     ProductListScreen(),
     ProfileScreen(),
   ];
@@ -37,6 +41,8 @@ class _MenuScreenState extends State<MenuScreen> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Beranda'),
           BottomNavigationBarItem(icon: Icon(Icons.article), label: 'Posts'),
+          BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Al-quran'),
+          BottomNavigationBarItem(icon: Icon(Icons.article), label: 'Ganjil'),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart),
             label: 'Produk',
